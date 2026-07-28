@@ -6,7 +6,7 @@ import uuid
 import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
 
-DATABSE_URL = os.environ.get("DATABASE_URL")
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 
