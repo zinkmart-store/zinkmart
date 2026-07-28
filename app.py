@@ -6,12 +6,11 @@ import uuid
 import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
 
-conn = psycopg2.connect(
-    host="localhost",
-    database="hitesh_store",
-    user="postgres",
-    password="987654"
-)
+DATABSE_URL =
+os.environ.get("DATABASE_URL")
+
+conn =
+psycopg2.connect(DATABASE_URL)
 
 UPLOAD_FOLDER = "uploads"
 
